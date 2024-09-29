@@ -1,0 +1,14 @@
+{
+  "name": "practice_1",
+  "version": "1.0.0",
+  "description": "Let's build proto and check generated files.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "protoc-gen-ts": "^0.8.7"
+  }
+}
