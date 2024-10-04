@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "@grpc/grpc-js": "^1.11.3",
+    "@grpc/proto-loader": "^0.7.13",
+    "@types/google-protobuf": "^3.15.12",
+    "google-protobuf": "^3.21.4",
+    "grpc-server-reflection": "^0.1.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.4",
+    "grpc_tools_node_protoc_ts": "^5.3.3",
+    "grpc-tools": "^1.12.4",
+    "nodemon": "^3.1.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2"
+  },
+  "scripts": {
+    "generate": "grpc_tools_node_protoc --js_out=import_style=commonjs,binary:./.generated --grpc_out=grpc_js:./.generated --ts_out=grpc_js:./.generated -I ./proto ./proto/*.proto",
+    "generate-desc": "grpc_tools_node_protoc --descriptor_set_out=./.generated/descriptor_set.bin --include_imports ./proto/*.proto",
+    "server": "npm run server-build:live",
+    "server-build": "tsc -p .",
+    "server-build:live": "nodemon --watch 'server/src/**/*.ts' --exec \"ts-node\" server/src/index.ts",
+    "client": "npm run client-build:live",
+    "client-build": "tsc -p .",
+    "client-build:live": "nodemon --watch 'client/src/**/*.ts' --exec \"ts-node\" client/src/index.ts"
+  }
+}
