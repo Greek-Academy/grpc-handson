@@ -1,6 +1,4 @@
-# Practice 1
-
-Let's build proto and check generated files.
+# Practice 1: Build proto and check generated files
 
 ## Installation
 

@@ -7,6 +7,8 @@ function sendChat(message: string) {
   chatMessage.setMessage(message);
   chatMessage.setReactionCount(1);
   console.log(chatMessage.getMessage());
+
+  // when want to send data to the server, use write method.
   call.write(chatMessage);
 }
 
