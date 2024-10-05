@@ -2,12 +2,15 @@
 
 ## Installation
 
-Install Protocol Buffer Compiler.
+Install Protocol Buffer Compiler.  
+**MacOS**  
+ref. https://grpc.io/docs/protoc-installation/
 
     $ brew install protobuf
     $ which protoc
 
-ref. https://grpc.io/docs/protoc-installation/
+**Windows**  
+ref. https://qiita.com/nzer0/items/7208c880693e63ca247a#win
 
 ## Compile a proto file
 

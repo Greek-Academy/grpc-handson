@@ -1,6 +1,4 @@
-# Practice 2
-
-Call a function on server from client.
+# Practice 2: Call a function on server from client
 
 ## Server side
 
@@ -10,6 +8,13 @@ Install packages
 
 ```shell
 $ npm intall
+```
+
+Generate codes
+
+```shell
+$ npm run generate
+$ npm run generate-desc
 ```
 
 Run server (Defined the script on package.json)
