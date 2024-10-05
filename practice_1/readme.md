@@ -22,7 +22,13 @@ ref. https://qiita.com/nzer0/items/7208c880693e63ca247a#win
 $ mkdir .generated
 ```
 
-2. generate code with using protoc command.
+2. install npm packages
+
+```shell
+$ npm install
+```
+
+3. generate code with using protoc command.
 
 ```shell
 $ protoc -I=proto --ts_out=.generated ChatService.proto
