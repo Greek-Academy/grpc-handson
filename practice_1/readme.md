@@ -28,9 +28,27 @@ $ mkdir .generated
 $ protoc -I=proto --ts_out=.generated ChatService.proto
 ```
 
+If got an error of `protoc-gen-ts is not found`, add `proto-gen-ts`'s path.
+
+```shell
+#!/bin/bash
+# Path to this plugin
+PROTOC_GEN_TS_PATH="./node_modules/.bin/protoc-gen-ts"
+
+# Directory to write generated code to (.js and .d.ts files)
+OUT_DIR="./.generated"
+
+mkdir -p ${OUT_DIR}
+
+protoc \
+    --plugin="protoc-gen-ts=${PROTOC_GEN_TS_PATH}" \
+    --ts_out="${OUT_DIR}" \
+    ./proto/ChatService.proto
+```
+
 ## Add a new field to ChatService
 
-Let's add the count of reactions field to ChatService. You can see the data types of protobuf from here.
+Let's add the count of reactions field to ChatService. You can see the data types of protobuf from here.  
 https://protobuf.dev/programming-guides/proto3/
 
 1. add a new field to `ChatService`
